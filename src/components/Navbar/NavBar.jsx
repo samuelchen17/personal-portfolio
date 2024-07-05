@@ -3,7 +3,7 @@ import { navLinks } from "./NavLinks";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center w-full h-20 sticky top-0 bg-blue-700">
+    <div className="flex justify-between items-center w-full h-20 sticky top-0 bg-blue-900">
       <div>
         <h1>Chenmuel</h1>
       </div>
