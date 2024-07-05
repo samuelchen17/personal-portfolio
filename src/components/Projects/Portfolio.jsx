@@ -3,7 +3,7 @@ import Project from "./Project";
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className="h-dvh bg-yellow-500">
       <h1>Projects</h1>
       <div>
         <Project />

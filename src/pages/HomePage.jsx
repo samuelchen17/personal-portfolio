@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import About from "../components/About";
-import Skills from "../components/Skills";
+import NavBar from "../components/Navbar/NavBar";
+import About from "../components/About/About";
+import Skills from "../components/Skills/Skills";
 import Contact from "../components/Contact";
 import Portfolio from "../components/Projects/Portfolio";
-import Home from "../components/Home";
+import Home from "../components/Home/Home";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
