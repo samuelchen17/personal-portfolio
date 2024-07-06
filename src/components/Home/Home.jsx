@@ -6,8 +6,10 @@ const Home = () => {
       <div className="flex flex-col">
         <div className="text-sky-400">Hello, I'm Sam.</div>
         <div className="">I'm a front-end developer.</div>
-        <div>Link to Projects</div>
-        <div>Link to resume</div>
+        <div className="flex gap-4">
+          <button className="bg-blue-400 rounded-full">Projects</button>
+          <button className="bg-blue-400 rounded-full">resume</button>
+        </div>
       </div>
     </div>
   );

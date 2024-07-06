@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-blue-400 h-dvh">
+    <div className="bg-blue-900 h-dvh">
       <h1>ABOUT</h1>
       <div>
         I am a driven and enthusiastic aspiring software engineer with a strong
