@@ -1,8 +1,9 @@
 import React from "react";
+import Meteors from "../ui/meteors";
 
 const About = () => {
   return (
-    <div className="bg-blue-950 h-dvh text-white">
+    <div className="bg-blue-950 h-dvh text-white relative">
       <h1>ABOUT</h1>
       <div>
         I am a driven and enthusiastic aspiring software engineer with a strong
@@ -17,6 +18,7 @@ const About = () => {
         professional growth within a positive and inclusive company culture. In
         my spare time you'll catch me down windy roads on my motorcycle.
       </div>
+      <Meteors number={50} />
     </div>
   );
 };

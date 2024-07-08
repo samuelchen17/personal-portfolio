@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center w-full h-20 sticky top-0 bg-sky-600">
+    <div className="flex justify-between items-center w-full h-20 sticky top-0 bg-sky-600 z-50">
       <div>
         <h1>Chenmuel</h1>
       </div>
