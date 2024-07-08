@@ -18,7 +18,6 @@ const About = () => {
         professional growth within a positive and inclusive company culture. In
         my spare time you'll catch me down windy roads on my motorcycle.
       </div>
-      <Meteors number={50} />
     </div>
   );
 };
