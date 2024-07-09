@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 import HomePage from "./pages/HomePage.jsx";
 import Resume from "./pages/Resume.jsx";
@@ -23,7 +21,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ScrollToHashElement behavior="smooth" block="start" inline="start" />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
