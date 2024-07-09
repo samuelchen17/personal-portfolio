@@ -5,7 +5,10 @@ import { BackgroundGradient } from "../ui/background-gradient";
 
 const Skills = () => {
   return (
-    <div className="h-dvh bg-gray-900 flex justify-center items-center flex-col">
+    <div
+      className="h-dvh bg-gray-900 flex justify-center items-center flex-col"
+      id="skills"
+    >
       <p className="text-white">Skills</p>
 
       {/* <ContainerScroll> */}

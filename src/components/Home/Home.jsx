@@ -1,10 +1,14 @@
 import React from "react";
 import { SparklesCore } from "../ui/sparkles";
 import Meteors from "../ui/meteors";
+import { navBarHeight } from "../../config/config";
 
 const Home = () => {
   return (
-    <div className="h-dvh bg-gray-900 text-white flex items-center justify-center flex-col relative">
+    <div
+      className={`h-dvh bg-gray-900 text-white flex items-center justify-center flex-col relative pt-${navBarHeight}`}
+      id="home"
+    >
       <Meteors number={5} />
 
       <div className="flex flex-col">
