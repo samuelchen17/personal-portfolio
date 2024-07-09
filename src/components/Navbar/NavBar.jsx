@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { navLinks } from "./NavLinks";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { navBarHeight } from "../../config/config";
 import NavModal from "./NavModal";
-import ScrollToLink from "../ScrollToLink";
+import ScrollToLink from "../common/ScrollToLink";
 
 const NavBar = () => {
   const [navModal, setNavModal] = useState(false);
 
   return (
     <div
-      className={`flex justify-between items-center w-full h-${navBarHeight} sticky top-0 bg-sky-600 z-50`}
+      className={`flex justify-between items-center w-full h-[70px] sticky top-0 bg-sky-600 z-50`}
     >
       <div>
         <h1>Chenmuel</h1>

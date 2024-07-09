@@ -1,14 +1,16 @@
 import React from "react";
 import { SparklesCore } from "../ui/sparkles";
 import Meteors from "../ui/meteors";
-import { navBarHeight } from "../../config/config";
 import { Link } from "react-router-dom";
-import ScrollToLink from "../ScrollToLink";
+import ScrollToLink from "../common/ScrollToLink";
+import FlipWords from "../ui/flip-words";
 
 const Home = () => {
+  const words = ["Former Civil Engineer", "Current Software Engineer"];
+
   return (
     <div
-      className={`h-dvh bg-gray-900 text-white flex items-center justify-center flex-col relative pt-${navBarHeight}`}
+      className="h-dvh bg-gray-800 text-white flex items-center justify-center flex-col relative"
       id="home"
     >
       {/* <div className="overflow-hidden">
@@ -17,13 +19,17 @@ const Home = () => {
 
       <div className="flex flex-col">
         <div className="text-sky-400">Hello, I'm Sam.</div>
+
+        <FlipWords words={words} className="text-white" />
+
+        <br />
         <div className="">I'm a front-end developer.</div>
         <div className="flex gap-4">
-          <ScrollToLink to="projects">
-            <button className="bg-blue-400 rounded-full py-2 px-4 outline outline-blue-400">
+          <div className="bg-blue-400 rounded-full py-2 px-4 outline outline-blue-400">
+            <ScrollToLink to="projects" offset={-70}>
               Projects
-            </button>
-          </ScrollToLink>
+            </ScrollToLink>
+          </div>
           <Link to="/resume">
             <button className="bg-blue-400 rounded-full">resume</button>
           </Link>

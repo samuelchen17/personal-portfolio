@@ -1,13 +1,9 @@
 import React from "react";
 import Meteors from "../ui/meteors";
-import { navBarHeight } from "../../config/config";
 
 const About = () => {
   return (
-    <div
-      className={`bg-blue-950 h-dvh text-white relative pt-${navBarHeight}`}
-      id="about"
-    >
+    <div className="bg-blue-950 h-dvh text-white relative" id="about">
       <div>
         <h1>ABOUT</h1>
         <div>
