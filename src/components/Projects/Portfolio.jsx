@@ -4,8 +4,9 @@ import { projects } from "./projects";
 
 const Portfolio = () => {
   return (
-    <div className="h-dvh" id="projects">
+    <div className="" id="projects">
       <h1>Projects</h1>
+      <br />
       <div className="flex gap-8 flex-wrap">
         {projects.map(({ title, desc, projects, link, code, src }) => (
           <div key={title}>

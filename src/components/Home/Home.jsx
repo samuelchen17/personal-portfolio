@@ -4,20 +4,21 @@ import Meteors from "../ui/meteors";
 import { Link } from "react-router-dom";
 import ScrollToLink from "../common/ScrollToLink";
 import FlipWords from "../ui/flip-words";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const words = ["Former Civil Engineer", "Current Software Engineer"];
 
   return (
     <div
-      className="h-dvh bg-gray-800 text-white flex items-center justify-center flex-col relative"
+      className="h-dvh bg-gray-800 text-white flex items-center justify-center flex-col"
       id="home"
     >
       {/* <div className="overflow-hidden">
         <Meteors number={5} />
       </div> */}
 
-      <div className="flex flex-col">
+      <div className="flex flex-col min-w-[300px]">
         <div className="text-white">Hello, I'm</div>
         <div className="flex-wrap">
           <div className="text-white text-4xl font-semibold mr-4">Samuel</div>
@@ -27,9 +28,13 @@ const Home = () => {
         <div className="">I'm a front-end developer.</div>
         <div className="flex gap-4">
           <ScrollToLink to="projects" offset={-70}>
-            <div className="bg-blue-400 rounded-md py-2 px-4 outline outline-blue-400 capitalize">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-blue-400 rounded-md py-2 px-4 outline outline-blue-400 capitalize"
+            >
               projects
-            </div>
+            </motion.button>
           </ScrollToLink>
           <Link to="/resume">
             <button className="bg-blue-400 rounded-md">resume</button>

@@ -4,6 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
 import ScrollToLink from "../common/ScrollToLink";
+import { AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const [navModal, setNavModal] = useState(false);
@@ -39,8 +40,10 @@ const NavBar = () => {
             />
           </div>
         </div>
-        {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
       </div>
+      <AnimatePresence initial={false} onExitComplete={() => null}>
+        {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
+      </AnimatePresence>
     </div>
   );
 };

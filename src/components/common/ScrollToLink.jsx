@@ -18,7 +18,7 @@ const ScrollToLink = ({ to, children, offset = 0 }) => {
     }, 100);
   };
 
-  return <button onClick={handleClick}>{children}</button>;
+  return <div onClick={handleClick}>{children}</div>;
 };
 
 export default ScrollToLink;
