@@ -2,14 +2,8 @@ import React, { useState } from "react";
 import { navLinks } from "./NavLinks";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import NavModal from "./NavModal";
 import ScrollToLink from "../common/ScrollToLink";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const NavBar = ({ navModal, setNavModal }) => {
   const [hideNav, setHideNav] = useState(false);
@@ -27,15 +21,13 @@ const NavBar = ({ navModal, setNavModal }) => {
 
   return (
     <motion.div
-      className={`flex justify-between items-center h-[70px] sticky top-0 bg-sky-600 z-30 w-full`}
+      className="h-20 fixed bg-col4 z-30 w-full flex"
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hideNav ? "hidden" : "visible"}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div>
-        <div>
-          <h1>SCDEV</h1>
-        </div>
+      <div className="flex items-center w-full justify-between wrapperSmall">
+        <h1 className="text-white">SCDEV</h1>
         <div>
           <ul className="sm:flex justify-end gap-4 hidden">
             {navLinks.map(({ link, id, offset }) => (
@@ -47,17 +39,16 @@ const NavBar = ({ navModal, setNavModal }) => {
             ))}
 
             <Link to="/resume">
-              <button className="bg-blue-900 py-2 px-2 rounded-full">
-                Resume
-              </button>
+              <button className="bg-col2 py-2 px-2 rounded-full">Resume</button>
             </Link>
           </ul>
-          <div className="text-white">
+          <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
             <IoMenu
-              className="sm:hidden flex"
+              className="sm:hidden flex text-white"
               onClick={() => setNavModal(!navModal)}
+              size={40}
             />
-          </div>
+          </motion.button>
         </div>
       </div>
     </motion.div>

@@ -3,9 +3,10 @@ import Meteors from "../ui/meteors";
 
 const About = () => {
   return (
-    <div className="h-dvh flex justify-center" id="about">
-      <div className="wrapper">
-        <h1>ABOUT ME</h1>
+    <div className="flex justify-center py-12" id="about">
+      <div className="wrapperSmall">
+        <h2 className="text-col3 text-xl">ABOUT ME</h2>
+        <br />
         <div>
           I am a highly motivated aspiring developer with a background in civil
           engineering, I aim to bring the problem solving skills and i aim to

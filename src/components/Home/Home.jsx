@@ -7,11 +7,11 @@ import FlipWords from "../ui/flip-words";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const words = ["Former Civil Engineer", "Current Software Engineer"];
+  const words = ["Civil Engineer", "Software Engineer"];
 
   return (
     <div
-      className="h-dvh bg-gray-800 text-white flex items-center justify-center flex-col"
+      className="h-[90dvh] min-h-[600px] bg-col1 text-white flex items-center justify-center flex-col"
       id="home"
     >
       {/* <div className="overflow-hidden">
@@ -22,22 +22,22 @@ const Home = () => {
         <div className="text-white">Hello, I'm</div>
         <div className="flex-wrap">
           <div className="text-white text-4xl font-semibold mr-4">Samuel</div>
-          <div className="text-sky-400 text-4xl font-semibold">Chen</div>
+          <div className="text-col text-4xl font-semibold">Chen</div>
         </div>
-        <FlipWords words={words} className="text-white text-2xl" />
+        <FlipWords words={words} className="text-white text-xl" />
         <div className="">I'm a front-end developer.</div>
         <div className="flex gap-4">
           <ScrollToLink to="projects" offset={-70}>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="bg-blue-400 rounded-md py-2 px-4 outline outline-blue-400 capitalize"
+              className="bg-col2 rounded-md py-2 px-4 capitalize"
             >
               projects
             </motion.button>
           </ScrollToLink>
           <Link to="/resume">
-            <button className="bg-blue-400 rounded-md">resume</button>
+            <button className="bg-col2 rounded-md">resume</button>
           </Link>
         </div>
       </div>

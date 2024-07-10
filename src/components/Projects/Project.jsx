@@ -7,7 +7,7 @@ const Project = ({ title, desc, project, link, code, src }) => {
         <img className="rounded-md" src={src} />
       </div>
       <p className="py-2 text-center">{title}</p>
-      <div className="hidden">
+      <div className="">
         <p>{desc}</p>
         <div className="flex justify-between">
           <a

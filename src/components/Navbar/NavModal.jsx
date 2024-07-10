@@ -31,7 +31,13 @@ const NavModal = ({ setNavModal, navModal }) => {
         {navLinks.map(({ link, id, offset }) => (
           <div key={id} onClick={() => setNavModal(!navModal)}>
             <ScrollToLink to={link} offset={offset}>
-              {link}
+              <motion.button
+                className="uppercase font-semibold text-2xl"
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {link}
+              </motion.button>
             </ScrollToLink>
           </div>
         ))}

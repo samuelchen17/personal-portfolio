@@ -18,7 +18,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [],
+  safelist: ["col1", "col2", "col3", "col4"],
   darkMode: "class",
   theme: {
     extend: {
@@ -34,6 +34,12 @@ module.exports = {
             opacity: "0",
           },
         },
+      },
+      colors: {
+        col4: "#071330",
+        col3: "#122E76",
+        col2: "#F7CB2D",
+        col1: "#A2C4E0",
       },
     },
   },
