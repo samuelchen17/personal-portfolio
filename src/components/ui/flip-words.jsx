@@ -67,7 +67,7 @@ const FlipWords = ({ words, duration = 3000, className }) => {
             }}
             className="inline-block"
           >
-            {letter}
+            {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
       </motion.div>

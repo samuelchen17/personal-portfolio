@@ -1,7 +1,10 @@
+import pokedexImg from "../../assets/project/pokedex.png";
+import weatherAppImg from "../../assets/project/weatherApp.jpeg";
+
 export const projects = [
   {
     title: "Poke Web Handbook",
-    // src: ,
+    src: pokedexImg,
     desc: "pokedex with xxx features",
     skillSet: ["React", "Tailwind"],
     link: "https://poke-web-handbook.vercel.app/",
@@ -9,7 +12,7 @@ export const projects = [
   },
   {
     title: "Weather App",
-    // src: ,
+    src: weatherAppImg,
     desc: "pokedex with xxx features",
     skillSet: ["React", "Tailwind"],
     link: "https://weather-app-one-red-97.vercel.app/",

@@ -18,20 +18,21 @@ const Home = () => {
       </div> */}
 
       <div className="flex flex-col">
-        <div className="text-sky-400">Hello, I'm Sam.</div>
-
-        <FlipWords words={words} className="text-white" />
-
-        <br />
+        <div className="text-white">Hello, I'm</div>
+        <div className="flex-wrap">
+          <div className="text-white text-4xl font-semibold mr-4">Samuel</div>
+          <div className="text-sky-400 text-4xl font-semibold">Chen</div>
+        </div>
+        <FlipWords words={words} className="text-white text-2xl" />
         <div className="">I'm a front-end developer.</div>
         <div className="flex gap-4">
-          <div className="bg-blue-400 rounded-full py-2 px-4 outline outline-blue-400">
-            <ScrollToLink to="projects" offset={-70}>
-              Projects
-            </ScrollToLink>
-          </div>
+          <ScrollToLink to="projects" offset={-70}>
+            <div className="bg-blue-400 rounded-md py-2 px-4 outline outline-blue-400 capitalize">
+              projects
+            </div>
+          </ScrollToLink>
           <Link to="/resume">
-            <button className="bg-blue-400 rounded-full">resume</button>
+            <button className="bg-blue-400 rounded-md">resume</button>
           </Link>
         </div>
       </div>

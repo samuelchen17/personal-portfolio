@@ -4,10 +4,10 @@ import { projects } from "./projects";
 
 const Portfolio = () => {
   return (
-    <div className="h-dvh bg-yellow-500" id="projects">
+    <div className="h-dvh" id="projects">
       <h1>Projects</h1>
       <div className="flex gap-8 flex-wrap">
-        {projects.map(({ title, desc, projects, link, code }) => (
+        {projects.map(({ title, desc, projects, link, code, src }) => (
           <div key={title}>
             <Project
               title={title}
@@ -15,6 +15,7 @@ const Portfolio = () => {
               projects={projects}
               link={link}
               code={code}
+              src={src}
             />
           </div>
         ))}

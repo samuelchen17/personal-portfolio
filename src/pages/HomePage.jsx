@@ -9,7 +9,8 @@ import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
-    <div>
+    // <div className="w-full flex justify-center">
+    <div className="">
       <NavBar />
       <Home />
       <About />
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Contact />
       <Footer />
     </div>
+    // </div>
   );
 };
 

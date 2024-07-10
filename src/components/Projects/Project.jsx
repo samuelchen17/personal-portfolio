@@ -1,10 +1,10 @@
 import React from "react";
 
-const Project = ({ title, desc, project, link, code }) => {
+const Project = ({ title, desc, project, link, code, src }) => {
   return (
     <div className="bg-red-500">
       <p>{title}</p>
-      <div className="h-[200px] w-[200px] bg-blue-600"></div>
+      <img src={src} />
       <p>{desc}</p>
       <div className="flex justify-between">
         <a

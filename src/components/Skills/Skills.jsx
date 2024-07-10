@@ -12,7 +12,7 @@ const Skills = () => {
       <p className="text-white">Skills</p>
 
       {/* <ContainerScroll> */}
-      <div className="flex gap-4 flex-wrap">
+      <div className="flex gap-4 flex-wrap items-center justify-center">
         {skillSet.map((skill, index) => (
           <div key={index}>
             <BackgroundGradient

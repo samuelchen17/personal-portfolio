@@ -3,12 +3,14 @@ import Meteors from "../ui/meteors";
 
 const About = () => {
   return (
-    <div className="bg-blue-950 h-dvh text-white relative" id="about">
-      <div>
-        <h1>ABOUT</h1>
+    <div className="h-dvh flex justify-center" id="about">
+      <div className="wrapper">
+        <h1>ABOUT ME</h1>
         <div>
-          I am a driven and enthusiastic aspiring software engineer with a
-          strong foundation in civil engineering, which has honed my
+          I am a highly motivated aspiring developer with a background in civil
+          engineering, I aim to bring the problem solving skills and i aim to
+          bring my I am a driven and enthusiastic aspiring software engineer
+          with a strong foundation in civil engineering, which has honed my
           problem-solving abilities and keen attention to detail. My passion for
           software development fuels my desire to utilize my diverse skill set
           in contributing to innovative and impactful projects.
