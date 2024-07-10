@@ -4,16 +4,35 @@ import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
 import ScrollToLink from "../common/ScrollToLink";
-import { AnimatePresence } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 
-const NavBar = () => {
-  const [navModal, setNavModal] = useState(false);
+const NavBar = ({ navModal, setNavModal }) => {
+  const [hideNav, setHideNav] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous) {
+      setHideNav(true);
+    } else {
+      setHideNav(false);
+    }
+  });
 
   return (
-    <div className="w-auto flex justify-center">
-      <div
-        className={`flex justify-between items-center h-[70px] fixed bg-sky-600 z-30 w-full`}
-      >
+    <motion.div
+      className={`flex justify-between items-center h-[70px] sticky top-0 bg-sky-600 z-30 w-full`}
+      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+      animate={hideNav ? "hidden" : "visible"}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
+      <div>
         <div>
           <h1>SCDEV</h1>
         </div>
@@ -41,10 +60,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <AnimatePresence initial={false} onExitComplete={() => null}>
-        {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
-      </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
