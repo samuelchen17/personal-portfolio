@@ -5,8 +5,8 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white flex justify-center items-center flex-col py-8">
-      <div>Get in touch</div>
+    <div className="bg-gray-900 text-white flex justify-center items-center flex-col py-6">
+      <div className="text-xs">Get in touch</div>
       <div className="flex gap-[1rem] py-2">
         <div className="flex flex-col justify-center items-center gap-1">
           <AiOutlineGithub size={35} />

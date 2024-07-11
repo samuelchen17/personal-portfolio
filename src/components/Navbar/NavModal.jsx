@@ -55,9 +55,13 @@ const NavModal = ({ setNavModal, navModal }) => {
         ))}
 
         <Link to="/resume">
-          <button className="bg-col2 text-white py-2 px-4 rounded-full font-semibold text-2xl">
-            RESUME
-          </button>
+          <motion.button
+            className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md text-2xl uppercase"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Resume
+          </motion.button>
         </Link>
       </div>
     </motion.div>

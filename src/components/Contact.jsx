@@ -5,9 +5,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex justify-center items-center py-12 min-h-[90svh] bg-col1"
+      className="flex justify-center items-center py-12 min-h-[80svh] bg-col1"
     >
-      <div className="w-full max-w-md p-8 space-y-6 sm:bg-gray-800 rounded-lg shadow-md">
+      <div className="w-full max-w-md p-8 space-y-6 sm:bg-gray-800 rounded-lg sm:shadow-md">
         <h2 className="text-col2 text-4xl font-bold py-4 text-center">
           Contact Me
         </h2>
@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
           <div className="flex justify-center">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md"
               type="submit"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
