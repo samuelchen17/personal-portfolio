@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { navLinks } from "./NavLinks";
 import ScrollToLink from "../common/ScrollToLink";
 import { motion } from "framer-motion";
+import { IoMdClose } from "react-icons/io";
 
 const slideIn = {
   hidden: { x: "100vw", opacity: 0 },
@@ -20,14 +21,25 @@ const slideIn = {
 const NavModal = ({ setNavModal, navModal }) => {
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-90 z-50 flex justify-center items-center"
+      className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-90 z-50 justify-center items-center"
       onClick={(event) => event.stopPropagation()}
       variants={slideIn}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <div className="flex justify-center flex-col items-center gap-4 text-white">
+      <motion.button
+        className="fixed right-3 top-3"
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <IoMdClose
+          className="text-white"
+          size={50}
+          onClick={() => setNavModal(false)}
+        />
+      </motion.button>
+      <div className="flex justify-center flex-col items-center gap-4 text-white h-svh">
         {navLinks.map(({ link, id, offset }) => (
           <div key={id} onClick={() => setNavModal(!navModal)}>
             <ScrollToLink to={link} offset={offset}>

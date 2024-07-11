@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.wrapper {
-  margin-inline: auto;
-  max-width: 1000px;
-}
-
-.wrapperSmall {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.projects {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }

@@ -11,7 +11,7 @@ const Project = ({ title, desc, project, link, code, src, skillSet }) => {
       <p className="py-2 text-center">{title}</p>
       <div className="">
         <p>{desc}</p>
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-2 flex-wrap">
           {skillSet.map((skill) => (
             <div className="bg-blue-500 py-1 px-2 rounded-full">{skill}</div>
           ))}

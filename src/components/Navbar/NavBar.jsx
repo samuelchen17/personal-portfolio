@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navLinks } from "./NavLinks";
-import { IoMenu } from "react-icons/io5";
+import { MdMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 import ScrollToLink from "../common/ScrollToLink";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
@@ -12,7 +12,7 @@ const NavBar = ({ navModal, setNavModal }) => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous) {
+    if (latest > previous && latest > 150) {
       setHideNav(true);
     } else {
       setHideNav(false);
@@ -26,24 +26,37 @@ const NavBar = ({ navModal, setNavModal }) => {
       animate={hideNav ? "hidden" : "visible"}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div className="flex items-center w-full justify-between wrapperSmall">
+      <div className="flex items-center w-full justify-between mx-auto p-4 max-w-screen-2xl">
         <h1 className="text-white">SCDEV</h1>
-        <div>
-          <ul className="sm:flex justify-end gap-4 hidden">
+        <div className="flex">
+          <ul className="sm:flex gap-4 hidden text-white items-center">
             {navLinks.map(({ link, id, offset }) => (
               <li key={id}>
-                <ScrollToLink to={link} offset={offset}>
-                  {link}
-                </ScrollToLink>
+                <motion.button
+                  className="uppercase font-semibold"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <ScrollToLink to={link} offset={offset}>
+                    {link}
+                  </ScrollToLink>
+                </motion.button>
               </li>
             ))}
 
             <Link to="/resume">
-              <button className="bg-col2 py-2 px-2 rounded-full">Resume</button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <button className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white">
+                  Resume
+                </button>
+              </motion.button>
             </Link>
           </ul>
-          <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <IoMenu
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <MdMenu
               className="sm:hidden flex text-white"
               onClick={() => setNavModal(!navModal)}
               size={40}

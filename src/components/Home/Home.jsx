@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import ScrollToLink from "../common/ScrollToLink";
 import FlipWords from "../ui/flip-words";
 import { motion } from "framer-motion";
+import { MdArrowRight } from "react-icons/md";
 
 const Home = () => {
   const words = ["Civil Engineer", "Software Engineer"];
 
   return (
     <div
-      className="h-[90dvh] min-h-[600px] bg-col1 text-white flex items-center justify-center flex-col"
+      className="h-[90svh] min-h-[600px] bg-col1 text-white flex items-center justify-center flex-col"
       id="home"
     >
       {/* <div className="overflow-hidden">
@@ -27,24 +28,26 @@ const Home = () => {
         <FlipWords words={words} className="text-white text-xl" />
         <div className="">I'm a front-end developer.</div>
         <div className="flex gap-4">
-          <ScrollToLink to="projects" offset={-70}>
+          <ScrollToLink to="projects">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="bg-col2 rounded-full py-2 px-4 capitalize"
             >
-              projects
+              <button className="bg-col2 py-2 pl-4 pr-1 rounded-md font-semibold uppercase text-white flex items-center justify-center">
+                projects <MdArrowRight size={25} />
+              </button>
             </motion.button>
           </ScrollToLink>
-          <Link to="/resume">
+          {/* <Link to="/resume">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="bg-col2 rounded-full py-2 px-4 capitalize"
             >
-              resume
+              <button className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white">
+                Resume
+              </button>
             </motion.button>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {/* <div className="w-[40rem] h-40 relative overflow-hidden">

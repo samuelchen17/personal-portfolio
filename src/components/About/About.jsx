@@ -4,12 +4,13 @@ import Meteors from "../ui/meteors";
 const About = () => {
   return (
     <div
-      className="flex justify-center bg-gray-800 items-center py-12 h-[90dvh] min-h-[600px]"
+      className="flex justify-center bg-gray-800 items-center py-12 h-[90svh] min-h-[600px]"
       id="about"
     >
-      <div className="wrapperSmall">
-        <h2 className="text-col2 text-4xl font-bold">ABOUT ME</h2>
-        <br />
+      <div className="mx-auto p-4 max-w-screen-lg ">
+        <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
+          ABOUT ME
+        </h2>
         <div className="text-white">
           <div>
             I am a highly motivated aspiring developer with a background in
@@ -26,6 +27,13 @@ const About = () => {
             champions continuous learning and development while fostering
             professional growth within a positive and inclusive company culture.
             In my spare time you'll catch me down windy roads on my motorcycle.
+          </div>
+          <div>
+            I am a highly motivated although my time my time as in the project
+            management team has equipped me with the skills needed to work
+            cohesively with people from different teams. I aim to bring my
+            skills and expertise into this new field, my problem solving skills
+            and acute thinking capabilities
           </div>
         </div>
       </div>
