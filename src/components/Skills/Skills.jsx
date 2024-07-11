@@ -5,7 +5,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 
 const Skills = () => {
   return (
-    <div className="py-12 bg-gray-900" id="skills">
+    <div className="py-12 bg-col1 flex items-center justify-center" id="skills">
       <div className="wrapperSmall flex justify-center items-center flex-col">
         <p className="text-white">Skills</p>
 

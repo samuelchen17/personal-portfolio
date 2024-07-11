@@ -21,7 +21,7 @@ const NavBar = ({ navModal, setNavModal }) => {
 
   return (
     <motion.div
-      className="h-20 fixed bg-col4 z-30 w-full flex"
+      className="h-20 fixed bg-gray-900 z-30 w-full flex"
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hideNav ? "hidden" : "visible"}
       transition={{ duration: 0.4, ease: "easeInOut" }}

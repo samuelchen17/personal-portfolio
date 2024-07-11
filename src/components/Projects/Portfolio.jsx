@@ -4,9 +4,9 @@ import { projects } from "./projects";
 
 const Portfolio = () => {
   return (
-    <div className="py-12" id="projects">
+    <div className="py-12 bg-gray-800" id="projects">
       <div className="wrapperSmall">
-        <h1>Projects</h1>
+        <h2 className="text-col2 text-4xl font-bold">Projects</h2>
         <br />
         <div className="flex gap-8 flex-wrap">
           {projects.map(({ title, desc, projects, link, code, src }) => (

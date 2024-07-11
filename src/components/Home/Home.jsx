@@ -22,7 +22,7 @@ const Home = () => {
         <div className="text-white">Hello, I'm</div>
         <div className="flex-wrap">
           <div className="text-white text-4xl font-semibold mr-4">Samuel</div>
-          <div className="text-col text-4xl font-semibold">Chen</div>
+          <div className="text-col text-col2 text-4xl font-semibold">Chen</div>
         </div>
         <FlipWords words={words} className="text-white text-xl" />
         <div className="">I'm a front-end developer.</div>
@@ -31,13 +31,19 @@ const Home = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="bg-col2 rounded-md py-2 px-4 capitalize"
+              className="bg-col2 rounded-full py-2 px-4 capitalize"
             >
               projects
             </motion.button>
           </ScrollToLink>
           <Link to="/resume">
-            <button className="bg-col2 rounded-md">resume</button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-col2 rounded-full py-2 px-4 capitalize"
+            >
+              resume
+            </motion.button>
           </Link>
         </div>
       </div>

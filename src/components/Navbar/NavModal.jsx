@@ -43,8 +43,8 @@ const NavModal = ({ setNavModal, navModal }) => {
         ))}
 
         <Link to="/resume">
-          <button className="bg-blue-900 text-white py-2 px-4 rounded-full">
-            Resume
+          <button className="bg-col2 text-white py-2 px-4 rounded-full font-semibold text-2xl">
+            RESUME
           </button>
         </Link>
       </div>

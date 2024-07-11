@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = ({ title, desc, project, link, code, src }) => {
   return (
-    <div className="bg-blue-950 rounded-md overflow-hidden text-white">
+    <div className="bg-col1 rounded-md overflow-hidden text-white">
       <div className="py-2 px-2">
         <img className="rounded-md" src={src} />
       </div>
