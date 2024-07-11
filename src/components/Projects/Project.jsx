@@ -12,8 +12,10 @@ const Project = ({ title, desc, project, link, code, src, skillSet }) => {
       <div className="">
         <p>{desc}</p>
         <div className="flex justify-center items-center gap-2 flex-wrap">
-          {skillSet.map((skill) => (
-            <div className="bg-blue-500 py-1 px-2 rounded-full">{skill}</div>
+          {skillSet.map((skill, index) => (
+            <div key={index} className="bg-blue-500 py-1 px-2 rounded-full">
+              {skill}
+            </div>
           ))}
         </div>
         <div className="flex justify-center gap-4">

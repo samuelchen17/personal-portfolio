@@ -4,7 +4,7 @@ import Meteors from "../ui/meteors";
 const About = () => {
   return (
     <div
-      className="flex justify-center bg-gray-800 items-center py-12 h-[90svh] min-h-[600px]"
+      className="flex justify-center bg-gray-800 items-center py-12 min-h-[90svh]"
       id="about"
     >
       <div className="mx-auto p-4 max-w-screen-lg ">

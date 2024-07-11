@@ -30,12 +30,11 @@ const Home = () => {
         <div className="flex gap-4">
           <ScrollToLink to="projects">
             <motion.button
+              className="bg-col2 py-2 pl-4 pr-1 rounded-md font-semibold uppercase text-white flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <button className="bg-col2 py-2 pl-4 pr-1 rounded-md font-semibold uppercase text-white flex items-center justify-center">
-                projects <MdArrowRight size={25} />
-              </button>
+              projects <MdArrowRight size={25} />
             </motion.button>
           </ScrollToLink>
           {/* <Link to="/resume">
