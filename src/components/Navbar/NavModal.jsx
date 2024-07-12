@@ -3,6 +3,7 @@ import { navLinks } from "./NavLinks";
 import ScrollToLink from "../common/ScrollToLink";
 import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
+import { socialLinks } from "../Socials/socialLinks";
 
 const slideIn = {
   hidden: { x: "100vw", opacity: 0 },
@@ -53,16 +54,31 @@ const NavModal = ({ setNavModal, navModal }) => {
             </ScrollToLink>
           </div>
         ))}
-
-        <Link to="/resume">
-          <motion.button
-            className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md text-2xl uppercase"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Resume
-          </motion.button>
-        </Link>
+        <div className="">
+          <Link to="/resume">
+            <motion.button
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md text-2xl"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Resume
+            </motion.button>
+          </Link>
+        </div>
+        <div className="flex justify-center items-center gap-8">
+          {socialLinks.map(({ title, href, icon }) => (
+            <div key={title}>
+              <a
+                href={href}
+                target="_blank"
+                className="flex flex-col justify-center items-center gap-1"
+              >
+                {icon}
+                <label className="text-xs">{title}</label>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
