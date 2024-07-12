@@ -4,9 +4,11 @@ import { projects } from "./projects";
 
 const Portfolio = () => {
   return (
-    <div className="py-12 bg-gray-800" id="projects">
+    <section className="py-12 bg-gray-800" id="projects">
       <div className="mx-auto p-4 max-w-screen-lg">
-        <h2 className="text-col2 text-4xl font-bold py-4">Projects</h2>
+        <h2 className="text-col2 text-4xl font-bold py-4 text-center sm:text-left">
+          Projects
+        </h2>
         <p className="text-center sm:text-left text-white">
           Here are some of my works:
         </p>
@@ -29,7 +31,7 @@ const Portfolio = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

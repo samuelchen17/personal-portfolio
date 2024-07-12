@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div
+    <section
       id="contact"
       className="flex justify-center items-center py-12 min-h-[80svh] bg-col1"
     >
@@ -11,9 +11,11 @@ const Contact = () => {
         <h2 className="text-col2 text-4xl font-bold py-4 text-center">
           Contact Me
         </h2>
-        <form className="space-y-4 text-white">
+        <form className="space-y-4">
           <div>
-            <label className="block text-sm font-medium">Name:</label>
+            <label className="block text-sm font-medium text-white">
+              Name:
+            </label>
             <input
               type="text"
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
@@ -21,7 +23,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Email:</label>
+            <label className="block text-sm font-medium text-white">
+              Email:
+            </label>
             <input
               type="email"
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
@@ -29,7 +33,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Message:</label>
+            <label className="block text-sm font-medium text-white">
+              Message:
+            </label>
             <textarea
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your message"
@@ -48,7 +54,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

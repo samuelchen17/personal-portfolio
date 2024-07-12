@@ -1,9 +1,8 @@
 import React from "react";
-import Meteors from "../ui/meteors";
 
 const About = () => {
   return (
-    <div
+    <section
       className="flex justify-center bg-gray-800 items-center py-12 min-h-[90svh]"
       id="about"
     >
@@ -14,30 +13,26 @@ const About = () => {
         <div className="text-white">
           <div>
             I am a highly motivated aspiring developer with a background in
-            civil engineering, I aim to bring the problem solving skills and i
-            aim to bring my I am a driven and enthusiastic aspiring software
-            engineer with a strong foundation in civil engineering, which has
-            honed my problem-solving abilities and keen attention to detail. My
-            passion for software development fuels my desire to utilize my
-            diverse skill set in contributing to innovative and impactful
-            projects.
+            civil engineering. My decision to transition to the software space
+            stems from my ambitions and passion towards software development.
+          </div>
+          <div>
+            My time as a project manager in civil engineering has equipped me
+            with skills such as problem solving and critical thinking, being
+            able to work cohesively with my peers to come up with solutions with
+            the ever-changing variables on site. I aim to bring my skills and
+            expertise into the software space. My passion for software
+            development fuels my desire to utilize my diverse skill set in
+            contributing to innovative and impactful projects.
           </div>
           <div>
             I am excited to be part of a vibrant and dynamic environment that
-            champions continuous learning and development while fostering
+            promotes continuous learning and development while fostering
             professional growth within a positive and inclusive company culture.
-            In my spare time you'll catch me down windy roads on my motorcycle.
-          </div>
-          <div>
-            I am a highly motivated although my time my time as in the project
-            management team has equipped me with the skills needed to work
-            cohesively with people from different teams. I aim to bring my
-            skills and expertise into this new field, my problem solving skills
-            and acute thinking capabilities
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,12 +1,11 @@
 import React from "react";
 import { skillSet } from "./skillSet";
-import { ContainerScroll } from "../ui/container-scroll-animation";
 
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <div
+    <section
       className="py-12 bg-col1 flex-col items-center justify-center"
       id="skills"
     >
@@ -16,7 +15,6 @@ const Skills = () => {
           Here are the skills I have acquired, as demonstrated in my projects:
         </p>
         <div className="flex justify-center items-center flex-col">
-          {/* <ContainerScroll> */}
           <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 items-center justify-center py-8">
             {skillSet.map((skill, index) => (
               <SkillCard key={index} skill={skill} />
@@ -24,8 +22,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      {/* </ContainerScroll> */}
-    </div>
+    </section>
   );
 };
 

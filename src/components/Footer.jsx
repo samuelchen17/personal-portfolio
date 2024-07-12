@@ -1,5 +1,6 @@
 import React from "react";
 import { socialLinks } from "./Socials/socialLinks";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -13,14 +14,19 @@ const Footer = () => {
               target="_blank"
               className="flex flex-col justify-center items-center gap-1"
             >
-              {icon}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {icon}
+              </motion.button>
               <label className="text-xs">{title}</label>
             </a>
           </div>
         ))}
       </div>
       <div className="text-xs">
-        2024 Samuel Chen Portfolio Website. All rights reserved.
+        Copyright © 2024 Samuel Chen Portfolio Website.
       </div>
     </div>
   );

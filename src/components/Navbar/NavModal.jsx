@@ -68,14 +68,18 @@ const NavModal = ({ setNavModal, navModal }) => {
         <div className="flex justify-center items-center gap-8">
           {socialLinks.map(({ title, href, icon }) => (
             <div key={title}>
-              <a
-                href={href}
-                target="_blank"
-                className="flex flex-col justify-center items-center gap-1"
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                {icon}
-                <label className="text-xs">{title}</label>
-              </a>
+                <a
+                  href={href}
+                  target="_blank"
+                  className="flex flex-col justify-center items-center gap-1"
+                >
+                  {icon}
+                </a>
+              </motion.button>
             </div>
           ))}
         </div>

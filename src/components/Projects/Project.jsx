@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Project = ({ title, desc, project, link, code, src, skillSet }) => {
+const Project = ({ title, desc, link, code, src, skillSet }) => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="bg-col1 rounded-md overflow-hidden text-white px-2 py-2 shadow-md shadow-white">
+    <div className="bg-col1 rounded-md overflow-hidden text-white shadow-md shadow-white">
       <div className="">
         <img className="rounded-md" src={src} alt={`${title} image`} />
       </div>
