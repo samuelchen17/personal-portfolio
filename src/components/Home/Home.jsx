@@ -14,18 +14,25 @@ const Home = () => {
       className="h-[90svh] min-h-[600px] bg-col1 text-white flex items-center justify-center flex-col pt-16"
       id="home"
     >
-      <div className="flex flex-col min-w-[300px]">
-        <div className="text-white">Hello, I'm</div>
+      <div className="flex flex-col min-w-[300px] px-4 max-w-[800px]">
+        <div className="text-white md:text-3xl text-2xl">Hello, I'm</div>
         <div className="flex-wrap">
-          <div className="text-white text-4xl font-semibold mr-4">Samuel</div>
-          <div className="text-col text-col2 text-4xl font-semibold">Chen</div>
+          <div className="text-white text-6xl font-semibold mr-4 md:text-9xl">
+            Samuel
+          </div>
+          <div className="text-col text-col2 text-6xl font-semibold  md:text-9xl">
+            Chen
+          </div>
         </div>
-        <FlipWords words={words} className="text-white text-xl" />
-        <div className="">I'm a front-end developer.</div>
+        <FlipWords words={words} className="text-white text-xl md:text-4xl " />
+        <div className="md:text-2xl">
+          I'm passionate about crafting digital solutions and bringing
+          innovative ideas to life through code!
+        </div>
         <div className="flex gap-4 my-2">
           <ScrollToLink to="projects">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white flex items-center justify-center shadow-md"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -35,7 +42,7 @@ const Home = () => {
           </ScrollToLink>
           <Link to="/resume">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white sm:hidden"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 sm:hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

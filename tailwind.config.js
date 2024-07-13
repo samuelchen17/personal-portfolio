@@ -29,6 +29,7 @@ module.exports = {
     "col8",
     "col9",
     "col10",
+    "col11",
   ],
   darkMode: "class",
   theme: {
@@ -58,7 +59,7 @@ module.exports = {
         col9: "#cbc0e4",
         col10: "#ffd471",
         col11: "#4aaea1",
-        // col11:""
+        col11: "#0e805c",
       },
     },
   },

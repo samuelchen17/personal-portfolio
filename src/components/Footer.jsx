@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-900 text-white flex justify-center items-center flex-col py-6">
       <div className="text-xs">Get in touch</div>
-      <div className="flex gap-4 py-2">
+      <div className="flex gap-4 py-4">
         {socialLinks.map(({ title, href, icon }) => (
           <div key={title}>
             <a
@@ -20,14 +20,12 @@ const Footer = () => {
               >
                 {icon}
               </motion.button>
-              <label className="text-xs">{title}</label>
+              {/* <label className="text-xs">{title}</label> */}
             </a>
           </div>
         ))}
       </div>
-      <div className="text-xs">
-        Copyright © 2024 Samuel Chen Portfolio Website.
-      </div>
+      <div className="text-xs">All rights reserved © 2024 Samuel Chen.</div>
     </div>
   );
 };

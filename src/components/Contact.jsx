@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <div className="flex justify-center">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11"
               type="submit"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
