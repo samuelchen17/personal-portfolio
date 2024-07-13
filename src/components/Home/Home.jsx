@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <section
-      className="h-[90svh] min-h-[600px] bg-col1 text-white flex items-center justify-center flex-col pt-16"
+      className="h-[90svh] min-h-[600px] bg-[url(assets/background/mountain.jpg)] bg-cover text-white flex items-center justify-center flex-col pt-16"
       id="home"
     >
       <div className="flex flex-col min-w-[300px] px-4 max-w-[800px]">
