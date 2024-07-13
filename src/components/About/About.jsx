@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineWork } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa";
 
 import Experience from "./Experience";
 
@@ -43,12 +44,36 @@ const About = () => {
             technologies and applying these skills to enhance my projects.
           </p>
         </div>
-        <div>
+        <div className="pt-12">
           <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
             Experience
           </h2>
           <div className="text-white">
             <Experience />
+          </div>
+        </div>
+        <div className="pt-12">
+          <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
+            Education
+          </h2>
+          <div className="text-white">
+            <div className="text-opacity-40 text-white py-2">
+              <div className="flex items-center gap-4">
+                <div className="bg-col1 py-3 px-3 rounded-full">
+                  <FaGraduationCap className="text-white" size={40} />
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold text-white">
+                    University of Auckland
+                  </p>
+                  <p>
+                    Bachelor of Engineering (Honours), Civil and Environmental
+                    Engineering
+                  </p>
+                  <p>Graduated: 2021</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

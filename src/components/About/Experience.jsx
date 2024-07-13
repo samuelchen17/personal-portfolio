@@ -6,18 +6,18 @@ const Experience = () => {
   return (
     <>
       {experiences.map(({ title, company, period, achievements }) => (
-        <div>
+        <div className="text-opacity-40 text-white py-2">
           <div className="flex items-center gap-4">
             <div className="bg-col1 py-3 px-3 rounded-full">
-              <MdOutlineWork size={40} />
+              <MdOutlineWork className="text-white" size={40} />
             </div>
             <div>
-              <p>{title}</p>
+              <p className="text-2xl font-semibold text-white">{title}</p>
               <p>{company}</p>
               <p>{period}</p>
             </div>
           </div>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-20 text-xl py-2">
             {achievements.map((achievement) => (
               <li>{achievement}</li>
             ))}
