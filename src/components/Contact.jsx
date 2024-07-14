@@ -21,9 +21,11 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          // add a react toast for success
         },
         (error) => {
           console.log("FAILED...", error.text);
+          // add a react toast for fail to send
         }
       );
   };
