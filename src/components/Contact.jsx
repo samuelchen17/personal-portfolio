@@ -2,15 +2,21 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
+const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_REACT_PUBLIC_KEY;
+
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    import.meta.env;
+
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
       })
       .then(
         () => {
