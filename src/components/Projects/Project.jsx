@@ -11,14 +11,14 @@ const Project = ({ title, desc, link, code, src, skillSet }) => {
       </div>
       <p className="py-2 text-center">{title}</p>
       <div className="">
-        {/* <p>{desc}</p> */}
-        {/* <div className="flex justify-center items-center gap-2 flex-wrap">
+        <p>{desc}</p>
+        <div className="flex justify-center items-center gap-2 flex-wrap">
           {skillSet.map((skill, index) => (
             <div key={index} className="bg-col py-1 px-2 rounded-full">
               {skill}
             </div>
           ))}
-        </div> */}
+        </div>
         <div className="flex justify-center gap-4">
           <motion.a
             href={link}

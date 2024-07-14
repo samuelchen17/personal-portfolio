@@ -7,7 +7,7 @@ import Experience from "./Experience";
 const About = () => {
   return (
     <section
-      className="flex-col justify-center bg-gray-800 items-center py-12 min-h-[90svh]"
+      className="flex-col justify-center bg-gray-950 items-center py-12 min-h-[90svh]"
       id="about"
     >
       <div className="mx-auto p-4 max-w-screen-lg ">
@@ -45,12 +45,7 @@ const About = () => {
           </p>
         </div>
         <div className="pt-12">
-          <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
-            Experience
-          </h2>
-          <div className="text-white">
-            <Experience />
-          </div>
+          <Experience />
         </div>
         <div className="pt-12">
           <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
@@ -71,6 +66,30 @@ const About = () => {
                     Engineering
                   </p>
                   <p>Graduated: 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="pt-12">
+          <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
+            Courses
+          </h2>
+          <div className="text-white">
+            <div className="text-opacity-40 text-white py-2">
+              <div className="flex items-center gap-4">
+                <div className="bg-col1 py-3 px-3 rounded-full">
+                  <FaGraduationCap className="text-white" size={40} />
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold text-white">
+                    FreeCodeCamp
+                  </p>
+                  <p>
+                    JavaScript Algorithms and Data Structures, Responsive Web
+                    Design
+                  </p>
+                  <p>Completed: 2024</p>
                 </div>
               </div>
             </div>

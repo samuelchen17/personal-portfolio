@@ -1,7 +1,25 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <section
       id="contact"
@@ -11,13 +29,14 @@ const Contact = () => {
         <h2 className="text-col2 text-4xl font-bold py-4 text-center">
           Contact Me
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4" ref={form} onSubmit={sendEmail}>
           <div>
             <label className="block text-sm font-medium text-white">
               Name:
             </label>
             <input
               type="text"
+              name="user_name"
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your name"
             />
@@ -28,6 +47,7 @@ const Contact = () => {
             </label>
             <input
               type="email"
+              name="user_email"
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your email"
             />
@@ -37,6 +57,7 @@ const Contact = () => {
               Message:
             </label>
             <textarea
+              name="message"
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your message"
               rows="4"
@@ -46,6 +67,7 @@ const Contact = () => {
             <motion.button
               className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11"
               type="submit"
+              value="Send"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -60,30 +82,30 @@ const Contact = () => {
 
 export default Contact;
 
-<div
-  className="h-[90svh] min-h-[600px] py-12 bg-col1 flex justify-center items-center"
-  id="contact"
->
-  <div className="mx-auto p-4 max-w-screen-lg">
-    {/* <p className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-    Contact
-  </p>
-  <p className="text-white">
-    Please fill out the form below to contact me:
-  </p> */}
-    <div className="flex flex-col justify-center items-center bg-gray-800 max-w-screen-sm rounded-md">
-      <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-        Contact Me
-      </h2>
-      <form className="flex flex-col rounded-md text-white">
-        <p>Name:</p>
-        <input type="text" placeholder="Enter your name"></input>
-        <p>Email:</p>
-        <input type="email" placeholder="Enter your Email"></input>
-        <p>Message:</p>
-        <textarea placeholder="Enter your message"></textarea>
-        <button>Contact me</button>
-      </form>
-    </div>
-  </div>
-</div>;
+// {/* <div
+//   className="h-[90svh] min-h-[600px] py-12 bg-col1 flex justify-center items-center"
+//   id="contact"
+// >
+//   <div className="mx-auto p-4 max-w-screen-lg">
+//     {/* <p className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
+//     Contact
+//   </p>
+//   <p className="text-white">
+//     Please fill out the form below to contact me:
+//   </p> */}
+//     <div className="flex flex-col justify-center items-center bg-gray-800 max-w-screen-sm rounded-md">
+//       <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
+//         Contact Me
+//       </h2>
+//       <form className="flex flex-col rounded-md text-white">
+//         <p>Name:</p>
+//         <input type="text" placeholder="Enter your name"></input>
+//         <p>Email:</p>
+//         <input type="email" placeholder="Enter your Email"></input>
+//         <p>Message:</p>
+//         <textarea placeholder="Enter your message"></textarea>
+//         <button>Contact me</button>
+//       </form>
+//     </div>
+//   </div>
+// </div>; */}

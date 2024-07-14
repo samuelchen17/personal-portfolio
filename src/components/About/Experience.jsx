@@ -5,25 +5,30 @@ import { MdOutlineWork } from "react-icons/md";
 const Experience = () => {
   return (
     <>
-      {experiences.map(({ title, company, period, achievements }) => (
-        <div className="text-opacity-40 text-white py-2">
-          <div className="flex items-center gap-4">
-            <div className="bg-col1 py-3 px-3 rounded-full">
-              <MdOutlineWork className="text-white" size={40} />
+      <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
+        Experience
+      </h2>
+      <div className="text-white">
+        {experiences.map(({ title, company, period, achievements }) => (
+          <div className="text-opacity-40 text-white py-2">
+            <div className="flex items-center gap-4">
+              <div className="bg-col1 py-3 px-3 rounded-full">
+                <MdOutlineWork className="text-white" size={40} />
+              </div>
+              <div>
+                <p className="text-2xl font-semibold text-white">{title}</p>
+                <p>{company}</p>
+                <p>{period}</p>
+              </div>
             </div>
-            <div>
-              <p className="text-2xl font-semibold text-white">{title}</p>
-              <p>{company}</p>
-              <p>{period}</p>
-            </div>
+            <ul className="list-disc pl-20 text-xl py-2">
+              {achievements.map((achievement) => (
+                <li>{achievement}</li>
+              ))}
+            </ul>
           </div>
-          <ul className="list-disc pl-20 text-xl py-2">
-            {achievements.map((achievement) => (
-              <li>{achievement}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };
