@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from "react-toastify";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -21,11 +22,31 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          // add a react toast for success
+          toast("🦄 Wow so easy!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            // transition: Bounce,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
-          // add a react toast for fail to send
+          toast("🦄 Wow so easy!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            // transition: Bounce,
+          });
         }
       );
   };
@@ -85,6 +106,19 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <ToastContainer />
     </section>
   );
 };
