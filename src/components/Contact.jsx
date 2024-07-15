@@ -19,6 +19,7 @@ const Contact = () => {
           publicKey: PUBLIC_KEY,
         }),
         {
+          pending: "Promise is pending",
           success: {
             render: "Message sent",
             position: "bottom-right",
@@ -113,18 +114,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <ToastContainer />
     </section>
   );
