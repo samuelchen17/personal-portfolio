@@ -7,7 +7,7 @@ import Experience from "./Experience";
 const About = () => {
   return (
     <section
-      className="flex-col justify-center items-center pt-12 min-h-[90svh] bg-gray-950"
+      className="flex-col justify-center items-center py-12 min-h-[90svh] bg-gray-950"
       id="about"
     >
       <div className="mx-auto p-4 max-w-screen-lg ">
@@ -96,7 +96,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="h-24 bg-gradient-to-b from-gray-950 to-col12"></div>
     </section>
   );
 };
