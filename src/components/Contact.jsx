@@ -22,7 +22,7 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          toast("🦄 Wow so easy!", {
+          toast("success", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -36,7 +36,7 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          toast("🦄 Wow so easy!", {
+          toast("failed", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -53,7 +53,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex justify-center items-center py-12 min-h-[80svh] bg-col1"
+      className="flex justify-center items-center py-12 min-h-[80svh] bg-col12"
     >
       <div className="w-full max-w-md p-8 space-y-6 sm:bg-gray-800 rounded-lg sm:shadow-md">
         <h2 className="text-col2 text-4xl font-bold py-4 text-center">
@@ -67,6 +67,7 @@ const Contact = () => {
             <input
               type="text"
               name="user_name"
+              required
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your name"
             />
@@ -78,6 +79,7 @@ const Contact = () => {
             <input
               type="email"
               name="user_email"
+              required
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your email"
             />
@@ -88,6 +90,7 @@ const Contact = () => {
             </label>
             <textarea
               name="message"
+              required
               className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2"
               placeholder="Your message"
               rows="4"

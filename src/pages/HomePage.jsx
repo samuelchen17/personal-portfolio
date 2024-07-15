@@ -17,6 +17,7 @@ const HomePage = () => {
         {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
       </AnimatePresence>
       <NavBar navModal={navModal} setNavModal={setNavModal} />
+      <div className="h-20 bg-colbg"></div>
       <Home />
       <About />
       <Skills />

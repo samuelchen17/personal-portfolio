@@ -6,7 +6,7 @@ import SkillCard from "./SkillCard";
 const Skills = () => {
   return (
     <section
-      className="py-12 bg-col1 flex-col items-center justify-center"
+      className="py-12 bg-col12 flex-col items-center justify-center"
       id="skills"
     >
       <div className="mx-auto p-4 max-w-screen-lg text-center sm:text-left">
