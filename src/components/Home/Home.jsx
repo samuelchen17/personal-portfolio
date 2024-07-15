@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <section
-      className="bg-[url(assets/background/auckland.jpg)] bg-center h-[95svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
+      className="bg-[url(assets/background/auckland.jpg)] bg-center h-[90svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
       id="home"
     >
       <div className="">

@@ -4,7 +4,7 @@ import { projects } from "./projects";
 
 const Portfolio = () => {
   return (
-    <section className="py-12 bg-gray-950" id="projects">
+    <section className="pt-12 bg-gray-950" id="projects">
       <div className="mx-auto p-4 max-w-screen-lg">
         <h2 className="text-col2 text-4xl font-bold py-4 text-center sm:text-left">
           Projects
@@ -31,6 +31,7 @@ const Portfolio = () => {
           )}
         </div>
       </div>
+      <div className="h-24 bg-gradient-to-b from-gray-950 to-col12"></div>
     </section>
   );
 };
