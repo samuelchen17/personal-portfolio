@@ -5,7 +5,6 @@ import FlipWords from "../ui/flip-words";
 import { motion } from "framer-motion";
 import { MdArrowRight } from "react-icons/md";
 import { socialLinks } from "../Socials/socialLinks";
-import aucklandImg from "../../assets/background/auckland.jpg";
 
 const Home = () => {
   const words = ["Former Civil Engineer", "Software Engineer"];
@@ -76,9 +75,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-        {/* <div className="relative">
-          <img src={aucklandImg} className="z-20" />
-        </div> */}
       </div>
     </section>
   );
