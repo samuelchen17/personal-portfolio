@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { toast, ToastContainer } from "react-toastify";
+import { toast, ToastContainer, Bounce } from "react-toastify";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -13,40 +13,44 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    import.meta.env;
-
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY,
-      })
+    toast
+      .promise(
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+          publicKey: PUBLIC_KEY,
+        }),
+        {
+          success: {
+            render: "Message sent",
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          },
+          error: {
+            render: "Message failed to send",
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          },
+        }
+      )
       .then(
         () => {
-          console.log("SUCCESS!");
-          toast("success", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            // transition: Bounce,
-          });
+          console.log("Message sent");
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          toast("failed", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            // transition: Bounce,
-          });
+          console.log("Message failed to send", error.text);
         }
       );
   };
@@ -55,7 +59,7 @@ const Contact = () => {
       id="contact"
       className="flex justify-center items-center py-12 min-h-[80svh] bg-col12"
     >
-      <div className="w-full max-w-md p-8 space-y-6 sm:bg-gray-800 rounded-lg sm:shadow-md">
+      <div className="w-full max-w-md p-8 space-y-6">
         <h2 className="text-col2 text-4xl font-bold py-4 text-center">
           Contact Me
         </h2>
