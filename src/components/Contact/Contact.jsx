@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast, ToastContainer, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -13,48 +14,45 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    toast
-      .promise(
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-          publicKey: PUBLIC_KEY,
-        }),
-        {
-          pending: "Promise is pending",
-          success: {
-            render: "Message sent",
-            position: "bottom-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-          },
-          error: {
-            render: "Message failed to send",
-            position: "bottom-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-          },
-        }
-      )
+    const toastId = toast.loading("Sending message...", {
+      position: "bottom-right",
+      autoClose: false,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "dark",
+    });
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
       .then(
         () => {
+          toast.update(toastId, {
+            render: "Message sent",
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
+            transition: Bounce,
+          });
           console.log("Message sent");
         },
         (error) => {
-          console.log("Message failed to send", error.text);
+          toast.update(toastId, {
+            render: "Failed to send message",
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
+            transition: Bounce,
+          });
+          console.log("Message failed to send", error);
         }
       );
   };
+
   return (
     <section
       id="contact"
@@ -114,7 +112,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-right" />
     </section>
   );
 };
