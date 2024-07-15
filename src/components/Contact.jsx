@@ -10,11 +10,11 @@ const PUBLIC_KEY = import.meta.env.VITE_REACT_PUBLIC_KEY;
 const Contact = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    toast
-      .promise(
+    try {
+      await toast.promise(
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
           publicKey: PUBLIC_KEY,
         }),
@@ -45,16 +45,13 @@ const Contact = () => {
             transition: Bounce,
           },
         }
-      )
-      .then(
-        () => {
-          console.log("Message sent");
-        },
-        (error) => {
-          console.log("Message failed to send", error.text);
-        }
       );
+      console.log("Message sent");
+    } catch (error) {
+      console.log("Message failed to send", error.text);
+    }
   };
+
   return (
     <section
       id="contact"
