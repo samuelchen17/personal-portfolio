@@ -6,8 +6,8 @@ import { IoMdClose } from "react-icons/io";
 import { socialLinks } from "../Socials/socialLinks";
 
 const slideIn = {
-  hidden: { x: "100vw", opacity: 0 },
-  visible: {
+  initial: { x: "100vw", opacity: 0 },
+  animate: {
     x: "0",
     opacity: 1,
     transition: { type: "tween", duration: 0.4, ease: "easeOut" },
@@ -25,9 +25,7 @@ const NavModal = ({ setNavModal, navModal }) => {
       className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-90 z-50 justify-center items-center"
       onClick={(event) => event.stopPropagation()}
       variants={slideIn}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      {...slideIn}
     >
       <motion.button
         className="fixed right-3 top-3"
