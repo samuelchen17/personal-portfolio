@@ -14,7 +14,7 @@ const About = () => {
         <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
           ABOUT ME
         </h2>
-        <div className="text-white flex flex-col text-opacity-40 gap-4 text-2xl">
+        <div className="text-white flex flex-col text-opacity-40 gap-4 sm:text-2xl text-xl">
           <p className="">
             I am a highly motivated{" "}
             <span className="text-white"> aspiring developer</span> with a

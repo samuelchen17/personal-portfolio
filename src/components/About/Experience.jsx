@@ -21,7 +21,7 @@ const Experience = () => {
                 <p>{period}</p>
               </div>
             </div>
-            <ul className="list-disc pl-20 text-xl py-2">
+            <ul className="list-disc sm:pl-20 pl-6 text-xl py-2">
               {achievements.map((achievement, index) => (
                 <li key={index}>{achievement}</li>
               ))}
