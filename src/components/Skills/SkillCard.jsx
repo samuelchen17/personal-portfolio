@@ -17,7 +17,7 @@ const SkillCard = ({ skill }) => {
               src={skill.src}
               alt={`${skill.name} icon`}
             />
-            <div className="text-white">{skill.name}</div>
+            <div className="text-white text-xl">{skill.name}</div>
           </div>
         </div>
       </BackgroundGradient>

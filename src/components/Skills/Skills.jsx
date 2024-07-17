@@ -11,7 +11,7 @@ const Skills = () => {
     >
       <div className="mx-auto p-4 max-w-screen-lg text-center sm:text-left">
         <h2 className="text-col2 text-4xl font-bold py-4">SKILLS</h2>
-        <p className="text-white">
+        <p className="text-white text-xl">
           Here are the skills I have acquired, as demonstrated in my projects:
         </p>
         <div className="flex justify-center items-center flex-col">

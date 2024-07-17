@@ -9,7 +9,7 @@ const Portfolio = () => {
         <h2 className="text-col2 text-4xl font-bold py-4 text-center sm:text-left">
           Projects
         </h2>
-        <p className="text-center sm:text-left text-white">
+        <p className="text-center sm:text-left text-white text-xl">
           Here are some of my works:
         </p>
         <br />

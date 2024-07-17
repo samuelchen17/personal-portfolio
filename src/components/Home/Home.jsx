@@ -10,11 +10,9 @@ import { Meteors } from "../ui/meteor";
 const Home = () => {
   const words = ["Former Civil Engineer", "Software Engineer"];
 
-  // bg-[url(assets/background/auckland.jpg)]
-
   return (
     <section
-      className="relative bg-[url(assets/background/auckland2.jpg)] bg-center h-[90svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
+      className="relative bg-[url(assets/background/heroBg.jpg)] bg-center h-[90svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
       id="home"
     >
       {/* <Meteors number={10} className="z-0" /> */}
