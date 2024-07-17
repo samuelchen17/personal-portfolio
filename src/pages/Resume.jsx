@@ -3,6 +3,8 @@ import NavBar from "../components/Navbar/NavBar";
 import NavModal from "../components/Navbar/NavModal";
 import { AnimatePresence } from "framer-motion";
 import resume from "../../public/resume/resume.jpg";
+import { motion } from "framer-motion";
+import { MdDownload } from "react-icons/md";
 
 const Resume = () => {
   const [navModal, setNavModal] = useState(false);
@@ -15,9 +17,13 @@ const Resume = () => {
       <div className="h-20 bg-colbg" />
 
       <div className="flex flex-col justify-center items-center h-screen bg-[url(assets/background/heroBg.jpg)] bg-cover bg-center">
-        <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-          Resume
-        </h2>
+        <motion.button
+          className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          download <MdDownload size={25} />
+        </motion.button>
 
         <img src={resume} />
       </div>
