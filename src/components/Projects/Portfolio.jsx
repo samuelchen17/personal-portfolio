@@ -13,7 +13,7 @@ const Portfolio = () => {
           Here are some of my works:
         </p>
         <br />
-        <div className="grid projects gap-8">
+        <div className="grid md:grid-cols-2 gap-4">
           {projects.map(
             ({ title, desc, projects, link, code, src, skillSet }) => (
               <div key={title}>
