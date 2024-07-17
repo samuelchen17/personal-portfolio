@@ -10,7 +10,7 @@ const Project = ({ title, desc, link, code, src, skillSet }) => {
       className="bg-gray-800 rounded-md overflow-hidden text-white"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="w-full h-60 overflow-hidden">
+      <div className="w-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src={src}
