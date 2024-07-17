@@ -17,7 +17,7 @@ const HomePage = () => {
         {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
       </AnimatePresence>
       <NavBar navModal={navModal} setNavModal={setNavModal} />
-      <div className="h-20 bg-colbg"></div>
+      <div className="h-20 bg-colbg" />
       <Home />
       <About />
       <div className="h-20 bg-gradient-to-b from-gray-950 to-col12" />
