@@ -9,14 +9,32 @@ import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavModal from "../components/Navbar/NavModal";
 import { useNavModal } from "../context/NavModalContext";
-import { useIsLoaded } from "../context/LoadedContext";
 import PreLoader from "../components/PreLoader";
 
 const HomePage = () => {
   const { navModal, setNavModal } = useNavModal();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const hasVisitedThisSession = sessionStorage.getItem(
+      "hasVisitedThisSession"
+    );
+
+    if (!hasVisitedThisSession) {
+      const loadTime = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("hasVisitedThisSession", "true");
+      }, 1500);
+
+      return () => clearTimeout(loadTime);
+    } else {
+      setLoading(false);
+    }
+  }, []);
 
   return (
     <>
+      <PreLoader loading={loading} />
       <AnimatePresence initial={false} onExitComplete={() => null}>
         {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
       </AnimatePresence>
