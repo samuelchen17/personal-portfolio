@@ -10,17 +10,13 @@ import { AnimatePresence } from "framer-motion";
 import NavModal from "../components/Navbar/NavModal";
 import { useNavModal } from "../context/NavModalContext";
 import { useIsLoaded } from "../context/LoadedContext";
+import PreLoader from "../components/PreLoader";
 
 const HomePage = () => {
   const { navModal, setNavModal } = useNavModal();
-  // const { loaded, setIsLoaded } = useIsLoaded();
-
-  // useEffect(() => {
-  //   setIsLoaded(true);
-  // }, []);
 
   return (
-    <div className="">
+    <>
       <AnimatePresence initial={false} onExitComplete={() => null}>
         {navModal && <NavModal setNavModal={setNavModal} navModal={navModal} />}
       </AnimatePresence>
@@ -35,7 +31,7 @@ const HomePage = () => {
       <div className="h-20 bg-gradient-to-b from-gray-950 to-col12" />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 };
 

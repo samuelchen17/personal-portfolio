@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollToLink from "../common/ScrollToLink";
 import FlipWords from "../ui/flip-words";
@@ -7,8 +7,19 @@ import { MdArrowRight } from "react-icons/md";
 import { socialLinks } from "../Socials/socialLinks";
 import bgImg from "../../assets/background/heroBg.jpg";
 
-const Home = () => {
+const Home = ({ setLoading }) => {
   const words = ["Former Civil Engineer", "Software Engineer"];
+
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src = bgImg;
+  //   img.onload = () => {
+  //     setLoading(false);
+  //   };
+  //   img.onerror = (err) => {
+  //     console.error("Failed to load image", err);
+  //   };
+  // }, [setLoading]);
 
   return (
     <section
@@ -17,7 +28,7 @@ const Home = () => {
       id="home"
     >
       <div className="z-10">
-        <div className="flex flex-col min-w-[300px] px-4 pb-28 max-w-[800px]">
+        <div className="flex flex-col min-w-[300px] px-4 pb-28 pt-4 max-w-[800px]">
           <div className="text-white md:text-3xl text-2xl">Hello, I'm</div>
           <div className="flex-wrap">
             <div className="text-white text-6xl font-semibold mr-4 md:text-9xl">

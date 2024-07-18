@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PreLoader from "./components/PreLoader.jsx";
 import { NavModalProvider } from "./context/NavModalContext.jsx";
-import { LoadedProvider, useIsLoaded } from "./context/LoadedContext.jsx";
+import { LoadedProvider } from "./context/LoadedContext.jsx";
 
 // import HomePage from "./pages/HomePage.jsx";
 // import Resume from "./pages/Resume.jsx";
@@ -26,32 +26,15 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  // const { loaded, setIsLoaded } = useIsLoaded();
-  const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1500);
-  // });
-
-  // if (loading) {
-  //   return <PreLoader />;
-  // }
-
   return (
     <Suspense fallback={<PreLoader />}>
-      <NavModalProvider>
-        <RouterProvider router={router} />
-      </NavModalProvider>
+      <LoadedProvider>
+        <NavModalProvider>
+          <RouterProvider router={router} />
+        </NavModalProvider>
+      </LoadedProvider>
     </Suspense>
   );
 };
-
-// const App = () => (
-//   <LoadedProvider>
-//     <AppContent />
-//   </LoadedProvider>
-// );
 
 export default App;
