@@ -26,10 +26,17 @@ const router = createBrowserRouter([
 
 const App = () => {
   // const { loaded, setIsLoaded } = useIsLoaded();
+  const [loading, setLoading] = useState(true);
 
-  // if (!loaded) {
-  //   return <PreLoader />;
-  // }
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  });
+
+  if (loading) {
+    return <PreLoader />;
+  }
 
   return (
     <Suspense fallback={<PreLoader />}>
