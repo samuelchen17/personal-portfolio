@@ -5,17 +5,17 @@ import FlipWords from "../ui/flip-words";
 import { motion } from "framer-motion";
 import { MdArrowRight } from "react-icons/md";
 import { socialLinks } from "../Socials/socialLinks";
-import { Meteors } from "../ui/meteor";
+import bgImg from "../../assets/background/heroBg.jpg";
 
 const Home = () => {
   const words = ["Former Civil Engineer", "Software Engineer"];
 
   return (
     <section
-      className="relative bg-[url(assets/background/heroBg.jpg)] bg-center h-[90svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
+      style={{ backgroundImage: `url(${bgImg})` }}
+      className="relative bg-center h-[90svh] min-h-[600px] bg-black bg-cover text-white flex items-center justify-center flex-col"
       id="home"
     >
-      {/* <Meteors number={10} className="z-0" /> */}
       <div className="z-10">
         <div className="flex flex-col min-w-[300px] px-4 pb-28 max-w-[800px]">
           <div className="text-white md:text-3xl text-2xl">Hello, I'm</div>
