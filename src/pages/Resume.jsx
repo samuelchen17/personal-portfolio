@@ -7,7 +7,7 @@ import resumePdf from "../../public/resume/resume.pdf";
 import { motion } from "framer-motion";
 import { MdDownload } from "react-icons/md";
 import Footer from "../components/Footer";
-import { useNavModal } from "../NavModalContext";
+import { useNavModal } from "../context/NavModalContext";
 
 const Resume = () => {
   const { navModal, setNavModal } = useNavModal();

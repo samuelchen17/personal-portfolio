@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
@@ -8,10 +8,16 @@ import Home from "../components/Home/Home";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavModal from "../components/Navbar/NavModal";
-import { useNavModal } from "../NavModalContext";
+import { useNavModal } from "../context/NavModalContext";
+import { useIsLoaded } from "../context/LoadedContext";
 
 const HomePage = () => {
   const { navModal, setNavModal } = useNavModal();
+  // const { loaded, setIsLoaded } = useIsLoaded();
+
+  // useEffect(() => {
+  //   setIsLoaded(true);
+  // }, []);
 
   return (
     <div className="">
