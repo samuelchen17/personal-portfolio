@@ -32,7 +32,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 1500);
   });
 
   // const loading = useImgLoader(bgImgPath);
