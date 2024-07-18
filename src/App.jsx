@@ -21,6 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/resume",
     element: <Resume />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
