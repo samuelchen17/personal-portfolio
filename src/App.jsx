@@ -28,15 +28,15 @@ const App = () => {
   // const { loaded, setIsLoaded } = useIsLoaded();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // });
 
-  if (loading) {
-    return <PreLoader />;
-  }
+  // if (loading) {
+  //   return <PreLoader />;
+  // }
 
   return (
     <Suspense fallback={<PreLoader />}>
