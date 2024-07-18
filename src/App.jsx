@@ -1,7 +1,47 @@
-import React from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PreLoader from "./components/PreLoader.jsx";
+import { NavModalProvider } from "./NavModalContext.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import Resume from "./pages/Resume.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+
+// const HomePage = lazy(() => import("./pages/HomePage"));
+// const Resume = lazy(() => import("./pages/Resume"));
+// const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/resume",
+    element: <Resume />,
+  },
+]);
 
 const App = () => {
-  return <div>App</div>;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  });
+
+  if (loading) {
+    return <PreLoader />;
+  }
+
+  return (
+    // <Suspense fallback={<PreLoader />}>
+    <NavModalProvider>
+      <RouterProvider router={router} />
+    </NavModalProvider>
+    // </Suspense>
+  );
 };
 
 export default App;

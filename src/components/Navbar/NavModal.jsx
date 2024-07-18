@@ -57,6 +57,7 @@ const NavModal = ({ setNavModal, navModal }) => {
               className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 text-2xl"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              onClick={() => setNavModal(!navModal)}
             >
               Resume
             </motion.button>

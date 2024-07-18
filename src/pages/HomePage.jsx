@@ -8,9 +8,11 @@ import Home from "../components/Home/Home";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavModal from "../components/Navbar/NavModal";
+import { useNavModal } from "../NavModalContext";
 
 const HomePage = () => {
-  const [navModal, setNavModal] = useState(false);
+  const { navModal, setNavModal } = useNavModal();
+
   return (
     <div className="">
       <AnimatePresence initial={false} onExitComplete={() => null}>
