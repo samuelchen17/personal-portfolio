@@ -2,13 +2,17 @@ import React, { Suspense, lazy, useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PreLoader from "./components/PreLoader.jsx";
 import { NavModalProvider } from "./NavModalContext.jsx";
-import HomePage from "./pages/HomePage.jsx";
-import Resume from "./pages/Resume.jsx";
-import ErrorPage from "./pages/ErrorPage.jsx";
+import useImgLoader from "./components/hooks/ useImgLoader.jsx";
 
-// const HomePage = lazy(() => import("./pages/HomePage"));
-// const Resume = lazy(() => import("./pages/Resume"));
-// const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+// import HomePage from "./pages/HomePage.jsx";
+// import Resume from "./pages/Resume.jsx";
+// import ErrorPage from "./pages/ErrorPage.jsx";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const Resume = lazy(() => import("./pages/Resume"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+
+const bgImgPath = "./assets/background/heroBg.jpg";
 
 const router = createBrowserRouter([
   {
@@ -28,19 +32,21 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1000);
   });
+
+  // const loading = useImgLoader(bgImgPath);
 
   if (loading) {
     return <PreLoader />;
   }
 
   return (
-    // <Suspense fallback={<PreLoader />}>
-    <NavModalProvider>
-      <RouterProvider router={router} />
-    </NavModalProvider>
-    // </Suspense>
+    <Suspense fallback={<PreLoader />}>
+      <NavModalProvider>
+        <RouterProvider router={router} />
+      </NavModalProvider>
+    </Suspense>
   );
 };
 
