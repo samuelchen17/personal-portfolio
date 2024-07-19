@@ -1,5 +1,6 @@
 import pokedexImg from "../../assets/project/pokedex.png";
 import weatherAppImg from "../../assets/project/weatherApp.jpeg";
+import portfolioImg from "../../assets/project/portfolio.jpeg";
 
 export const projects = [
   {
@@ -20,7 +21,7 @@ export const projects = [
   },
   {
     title: "Personal Portfolio",
-    src: weatherAppImg,
+    src: portfolioImg,
     desc: "My personal portfolio features engaging animations to enhance visuals, designed with scalability in mind to facilitate effortless updates and showcase my skills and projects effectively.",
     skillSet: [
       "React",
@@ -30,6 +31,6 @@ export const projects = [
       "HTML",
       "CSS",
     ],
-    code: "https://github.com/samuelchen17/react-weather-app",
+    code: "https://github.com/samuelchen17/personal-portfolio",
   },
 ];
