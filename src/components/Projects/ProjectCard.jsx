@@ -8,7 +8,7 @@ const ProjectCard = ({ title, desc, link, code, src, skillSet }) => {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  const scaleRate = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const scaleRate = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityRate = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
 
   return (

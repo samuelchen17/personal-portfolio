@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PreLoader from "./components/PreLoader.jsx";
 import { NavModalProvider } from "./components/hooks/NavModalContext.jsx";
