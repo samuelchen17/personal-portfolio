@@ -59,9 +59,9 @@ const Contact = () => {
       id="contact"
       className="flex justify-center items-center py-12 min-h-[80svh] bg-col12"
     >
-      <div className="w-full max-w-md p-8 space-y-6">
+      <div className="w-full max-w-lg p-8 space-y-6">
         <SectionHeading>Contact me</SectionHeading>
-        <form className="space-y-4" ref={form} onSubmit={sendEmail}>
+        <form className="space-y-4 text-white" ref={form} onSubmit={sendEmail}>
           <div>
             <label className="block text-sm font-medium text-white">
               Name:
@@ -70,7 +70,7 @@ const Contact = () => {
               type="text"
               name="user_name"
               required
-              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2 bg-white"
+              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm hover:border-col2 bg-colbg"
               placeholder="Your name"
             />
           </div>
@@ -82,7 +82,7 @@ const Contact = () => {
               type="email"
               name="user_email"
               required
-              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2 bg-white"
+              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm hover:border-col2 bg-colbg"
               placeholder="Your email"
             />
           </div>
@@ -93,7 +93,7 @@ const Contact = () => {
             <textarea
               name="message"
               required
-              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm focus:ring-col2 focus:border-col2 bg-white"
+              className="w-full px-3 py-2 mt-1 border border-white rounded-md shadow-sm hover:border-col2 bg-colbg"
               placeholder="Your message"
               rows="4"
             />

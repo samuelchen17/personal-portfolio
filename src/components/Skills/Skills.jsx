@@ -24,7 +24,7 @@ const Skills = () => {
       className="py-12 bg-col12 flex-col items-center justify-center"
       id="skills"
     >
-      <div className="mx-auto p-4 max-w-screen-lg text-center sm:text-left">
+      <div className="mx-auto p-4 max-w-screen-lg text-center">
         <SectionHeading>skills</SectionHeading>
         <p className="text-white text-xl">
           Here are the skills I have acquired, as demonstrated in my projects:
