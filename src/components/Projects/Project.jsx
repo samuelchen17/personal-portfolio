@@ -37,7 +37,7 @@ const Project = ({ title, desc, link, code, src, skillSet }) => {
                 target="_blank"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex"
+                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex"
               >
                 Demo
                 <MdArrowRight className="" size={25} />
@@ -48,7 +48,7 @@ const Project = ({ title, desc, link, code, src, skillSet }) => {
                 target="_blank"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex"
+                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex"
               >
                 CODE
                 <MdArrowRight className="" size={25} />

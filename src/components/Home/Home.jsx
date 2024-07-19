@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollToLink from "../common/ScrollToLink";
-import FlipWords from "../ui/flip-words";
+import FlipWords from "../design/ui/flip-words";
 import { motion } from "framer-motion";
 import { MdArrowRight } from "react-icons/md";
 import { socialLinks } from "../Socials/socialLinks";
@@ -49,7 +49,7 @@ const Home = ({ setLoading }) => {
           <div className="flex gap-4 my-2">
             <ScrollToLink to="projects">
               <motion.button
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex items-center justify-center"
+                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex items-center justify-center"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -59,7 +59,7 @@ const Home = ({ setLoading }) => {
             </ScrollToLink>
             <Link to="/resume">
               <motion.button
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 sm:hidden"
+                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white sm:hidden"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >

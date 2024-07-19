@@ -33,7 +33,7 @@ const NavBar = ({ navModal, setNavModal }) => {
             {navLinks.map(({ link, id, offset }) => (
               <li key={id}>
                 <motion.button
-                  className="uppercase font-semibold"
+                  className="uppercase font-semibold hover:text-col2"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -43,10 +43,9 @@ const NavBar = ({ navModal, setNavModal }) => {
                 </motion.button>
               </li>
             ))}
-
             <Link to="/resume">
               <motion.button
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11"
+                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -56,7 +55,7 @@ const NavBar = ({ navModal, setNavModal }) => {
           </ul>
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <MdMenu
-              className="sm:hidden flex text-white"
+              className="sm:hidden flex text-white hover:text-col2"
               onClick={() => setNavModal(!navModal)}
               size={40}
             />

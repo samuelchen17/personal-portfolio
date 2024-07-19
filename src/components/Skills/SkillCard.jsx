@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundGradient } from "../ui/background-gradient";
+import { BackgroundGradient } from "../design/ui/background-gradient";
 
 const SkillCard = ({ skill }) => {
   return (

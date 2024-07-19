@@ -3,6 +3,7 @@ import { MdOutlineWork } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 
 import Experience from "./Experience";
+import SectionHeading from "../design/ui-styling/SectionHeading";
 
 const About = () => {
   return (
@@ -11,9 +12,7 @@ const About = () => {
       id="about"
     >
       <div className="mx-auto p-4 max-w-screen-lg ">
-        <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-          ABOUT ME
-        </h2>
+        <SectionHeading>About me</SectionHeading>
         <div className="text-white flex flex-col text-opacity-40 gap-4 sm:text-2xl text-xl">
           <p className="">
             I am a highly motivated{" "}
@@ -48,9 +47,7 @@ const About = () => {
           <Experience />
         </div>
         <div className="pt-12">
-          <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
-            Education
-          </h2>
+          <SectionHeading>education</SectionHeading>
           <div className="text-white">
             <div className="text-opacity-40 text-white py-2">
               <div className="flex items-center gap-4">
@@ -72,9 +69,7 @@ const About = () => {
           </div>
         </div>
         <div className="pt-12">
-          <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
-            Courses
-          </h2>
+          <SectionHeading>courses</SectionHeading>
           <div className="text-white">
             <div className="text-opacity-40 text-white py-2">
               <div className="flex items-center gap-4">

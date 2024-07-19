@@ -35,7 +35,7 @@ const NavModal = ({ setNavModal, navModal }) => {
         whileTap={{ scale: 0.9 }}
       >
         <IoMdClose
-          className="text-white"
+          className="text-white hover:text-col2"
           size={50}
           onClick={() => setNavModal(false)}
         />
@@ -45,7 +45,7 @@ const NavModal = ({ setNavModal, navModal }) => {
           <div key={id} onClick={() => setNavModal(!navModal)}>
             <ScrollToLink to={link} offset={offset}>
               <motion.button
-                className="uppercase font-semibold text-2xl"
+                className="uppercase font-semibold text-2xl hover:text-col2"
                 whileHover={{ scale: 1.4 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -57,7 +57,7 @@ const NavModal = ({ setNavModal, navModal }) => {
         <div className="">
           <Link to="/resume">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 text-2xl"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white text-2xl"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setNavModal(!navModal)}
@@ -70,13 +70,13 @@ const NavModal = ({ setNavModal, navModal }) => {
           {socialLinks.map(({ title, href, icon }) => (
             <div key={title}>
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <a
                   href={href}
                   target="_blank"
-                  className="flex flex-col justify-center items-center gap-1"
+                  className="flex flex-col justify-center items-center gap-1 hover:text-col2"
                 >
                   {icon}
                 </a>

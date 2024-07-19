@@ -21,7 +21,7 @@ const Resume = () => {
       <div className="h-20 bg-colbg" />
       <div className="flex flex-col justify-center items-center bg-[url(assets/background/heroBg.jpg)] bg-cover bg-center min-h-svh pt-4 pb-16">
         <motion.a
-          className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11 flex items-center justify-center my-6"
+          className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex items-center justify-center my-6"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           href={resumePdf}

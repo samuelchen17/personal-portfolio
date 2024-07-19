@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="text-xs">Get in touch</div>
       <div className="flex gap-4 py-4">
         {socialLinks.map(({ title, href, icon }) => (
-          <div key={title}>
+          <React.Fragment key={title}>
             <a
               href={href}
               target="_blank"
@@ -22,7 +22,7 @@ const Footer = () => {
               </motion.button>
               {/* <label className="text-xs">{title}</label> */}
             </a>
-          </div>
+          </React.Fragment>
         ))}
       </div>
       <div className="text-xs">All rights reserved © 2024 Samuel Chen.</div>

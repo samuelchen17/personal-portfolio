@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast, ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SectionHeading from "../design/ui-styling/SectionHeading";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -59,9 +60,7 @@ const Contact = () => {
       className="flex justify-center items-center py-12 min-h-[80svh] bg-col12"
     >
       <div className="w-full max-w-md p-8 space-y-6">
-        <h2 className="text-col2 text-4xl font-bold py-4 text-center">
-          Contact Me
-        </h2>
+        <SectionHeading>Contact me</SectionHeading>
         <form className="space-y-4" ref={form} onSubmit={sendEmail}>
           <div>
             <label className="block text-sm font-medium text-white">
@@ -101,7 +100,7 @@ const Contact = () => {
           </div>
           <div className="flex justify-center">
             <motion.button
-              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:bg-col11"
+              className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white"
               type="submit"
               value="Send"
               whileHover={{ scale: 1.1 }}

@@ -1,13 +1,12 @@
 import React from "react";
 import { experiences } from "./experiences";
 import { MdOutlineWork } from "react-icons/md";
+import SectionHeading from "../design/ui-styling/SectionHeading";
 
 const Experience = () => {
   return (
     <>
-      <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center uppercase">
-        Experience
-      </h2>
+      <SectionHeading>Experience</SectionHeading>
       <div className="text-white">
         {experiences.map(({ title, company, period, achievements }) => (
           <div className="text-opacity-40 text-white py-2" key={title}>
