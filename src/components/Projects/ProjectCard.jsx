@@ -29,16 +29,18 @@ const ProjectCard = ({ title, desc, link, code, src, skillSet }) => {
               ))}
             </ul>
             <div className="flex justify-center gap-4 mb-4 sm:mb-0">
-              <motion.a
-                href={link}
-                target="_blank"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex"
-              >
-                Demo
-                <MdArrowRight className="" size={25} />
-              </motion.a>
+              {link && (
+                <motion.a
+                  href={link}
+                  target="_blank"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-col2 py-2 px-4 rounded-md font-semibold uppercase text-white shadow-md hover:text-col2 hover:bg-white flex"
+                >
+                  Demo
+                  <MdArrowRight className="" size={25} />
+                </motion.a>
+              )}
 
               <motion.a
                 href={code}
