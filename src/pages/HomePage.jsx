@@ -8,7 +8,7 @@ import Home from "../components/Home/Home";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import NavModal from "../components/Navbar/NavModal";
-import { useNavModal } from "../context/NavModalContext";
+import { useNavModal } from "../components/hooks/NavModalContext";
 import PreLoader from "../components/PreLoader";
 
 const HomePage = () => {

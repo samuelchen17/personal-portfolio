@@ -24,7 +24,10 @@ const NavModal = ({ setNavModal, navModal }) => {
     <motion.div
       className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-90 z-50 justify-center items-center"
       onClick={(event) => event.stopPropagation()}
-      {...slideIn}
+      variants={slideIn}
+      initial="initial"
+      animate="animate"
+      exit="exit"
     >
       <motion.button
         className="fixed right-3 top-3"
