@@ -13,7 +13,7 @@ const About = () => {
     >
       <div className="mx-auto p-4 max-w-screen-lg ">
         <SectionHeading>About me</SectionHeading>
-        <div className="text-white flex flex-col text-opacity-40 gap-4 sm:text-2xl text-xl">
+        <div className="text-white flex flex-col text-opacity-50 gap-4 sm:text-2xl text-xl">
           <p className="">
             I am a highly motivated{" "}
             <span className="text-white"> aspiring developer</span> with a
@@ -49,7 +49,7 @@ const About = () => {
         <div className="pt-12">
           <SectionHeading>education</SectionHeading>
           <div className="text-white">
-            <div className="text-opacity-40 text-white py-2">
+            <div className="text-opacity-50 text-white py-2">
               <div className="flex items-center gap-4">
                 <div className="bg-col1 py-3 px-3 rounded-full">
                   <FaGraduationCap className="text-white" size={40} />
@@ -71,7 +71,7 @@ const About = () => {
         <div className="pt-12">
           <SectionHeading>courses</SectionHeading>
           <div className="text-white">
-            <div className="text-opacity-40 text-white py-2">
+            <div className="text-opacity-50 text-white py-2">
               <div className="flex items-center gap-4">
                 <div className="bg-col1 py-3 px-3 rounded-full">
                   <FaGraduationCap className="text-white" size={40} />
