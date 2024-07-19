@@ -1,8 +1,7 @@
-import React, { Suspense, lazy, useState, useEffect } from "react";
+import React, { Suspense, lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PreLoader from "./components/PreLoader.jsx";
 import { NavModalProvider } from "./context/NavModalContext.jsx";
-import { LoadedProvider } from "./context/LoadedContext.jsx";
 
 // import HomePage from "./pages/HomePage.jsx";
 // import Resume from "./pages/Resume.jsx";
@@ -28,11 +27,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <Suspense fallback={<PreLoader />}>
-      <LoadedProvider>
-        <NavModalProvider>
-          <RouterProvider router={router} />
-        </NavModalProvider>
-      </LoadedProvider>
+      <NavModalProvider>
+        <RouterProvider router={router} />
+      </NavModalProvider>
     </Suspense>
   );
 };
