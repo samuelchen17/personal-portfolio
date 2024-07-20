@@ -7,19 +7,8 @@ import { MdArrowRight } from "react-icons/md";
 import { socialLinks } from "../Socials/socialLinks";
 import bgImg from "../../assets/background/heroBg.jpg";
 
-const Home = ({ setLoading }) => {
+const Home = () => {
   const words = ["Former Civil Engineer", "Software Engineer"];
-
-  // useEffect(() => {
-  //   const img = new Image();
-  //   img.src = bgImg;
-  //   img.onload = () => {
-  //     setLoading(false);
-  //   };
-  //   img.onerror = (err) => {
-  //     console.error("Failed to load image", err);
-  //   };
-  // }, [setLoading]);
 
   return (
     <section
