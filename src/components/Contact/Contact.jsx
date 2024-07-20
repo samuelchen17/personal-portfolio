@@ -117,31 +117,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// {/* <div
-//   className="h-[90svh] min-h-[600px] py-12 bg-col1 flex justify-center items-center"
-//   id="contact"
-// >
-//   <div className="mx-auto p-4 max-w-screen-lg">
-//     {/* <p className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-//     Contact
-//   </p>
-//   <p className="text-white">
-//     Please fill out the form below to contact me:
-//   </p> */}
-//     <div className="flex flex-col justify-center items-center bg-gray-800 max-w-screen-sm rounded-md">
-//       <h2 className="text-col2 text-4xl font-bold py-4 sm:text-left text-center">
-//         Contact Me
-//       </h2>
-//       <form className="flex flex-col rounded-md text-white">
-//         <p>Name:</p>
-//         <input type="text" placeholder="Enter your name"></input>
-//         <p>Email:</p>
-//         <input type="email" placeholder="Enter your Email"></input>
-//         <p>Message:</p>
-//         <textarea placeholder="Enter your message"></textarea>
-//         <button>Contact me</button>
-//       </form>
-//     </div>
-//   </div>
-// </div>; */}
