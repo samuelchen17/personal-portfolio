@@ -1,8 +1,6 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PreLoader from "./components/PreLoader.jsx";
 import { NavModalProvider } from "./components/hooks/NavModalContext.jsx";
-
 import HomePage from "./pages/HomePage.jsx";
 import Resume from "./pages/Resume.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";

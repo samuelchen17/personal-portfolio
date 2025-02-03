@@ -27,7 +27,11 @@ const NavBar = ({ navModal, setNavModal }) => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <div className="flex items-center w-full justify-between mx-auto p-4 max-w-screen-2xl">
-        <h1 className="text-white font-bold text-2xl">SCDEV</h1>
+        <ScrollToLink to="home" offset={-70}>
+          <h1 className="text-white font-bold text-2xl hover:cursor-pointer">
+            SCDEV
+          </h1>
+        </ScrollToLink>
         <div className="flex">
           <ul className="sm:flex gap-4 hidden text-white items-center">
             {navLinks.map(({ link, id, offset }) => (

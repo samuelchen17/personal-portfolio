@@ -4,6 +4,24 @@ import portfolioImg from "../../assets/project/portfolio.jpeg";
 
 export const projects = [
   {
+    title: "MOTOCE Blog",
+    src: portfolioImg,
+    desc: "Developed a motorcycle blog websites where user's can comment, like and save posts",
+    skillSet: [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Express",
+      "NodeJs",
+      "Axios",
+    ],
+    link: "https://moto-blog-2.vercel.app/",
+    code: "https://github.com/samuelchen17/moto-blog-2",
+  },
+  {
     title: "Poké Web Handbook",
     src: pokedexImg,
     desc: "Developed a responsive and interactive Pokémon handbook website utilizing the Pokémon API to offer detailed information on Pokémon across multiple regions. Has a favourites feature built in.",
