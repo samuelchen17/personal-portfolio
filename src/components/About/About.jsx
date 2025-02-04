@@ -48,44 +48,55 @@ const About = () => {
         </div>
         <div className="pt-12">
           <SectionHeading>education</SectionHeading>
-          <div className="text-white">
-            <div className="text-opacity-50 text-white py-2">
-              <div className="flex items-center gap-4">
-                <div className="bg-col1 py-3 px-3 rounded-full">
-                  <FaGraduationCap className="text-white" size={40} />
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-white">
-                    University of Auckland
-                  </p>
-                  <p>
-                    Bachelor of Engineering (Honours), Civil and Environmental
-                    Engineering
-                  </p>
-                  <p>Graduated: 2021</p>
-                </div>
+          <div className="text-opacity-50 text-white py-4">
+            <div className="flex items-center gap-4">
+              <div className="bg-col1 py-3 px-3 rounded-full">
+                <FaGraduationCap className="text-white" size={40} />
+              </div>
+              <div>
+                <p className="text-2xl font-semibold text-white">
+                  University of Auckland
+                </p>
+                <p>
+                  Bachelor of Engineering (Honours), Civil and Environmental
+                  Engineering
+                </p>
+                <p>Graduated: 2021</p>
               </div>
             </div>
           </div>
         </div>
         <div className="pt-12">
           <SectionHeading>courses</SectionHeading>
-          <div className="text-white">
-            <div className="text-opacity-50 text-white py-2">
-              <div className="flex items-center gap-4">
-                <div className="bg-col1 py-3 px-3 rounded-full">
-                  <FaGraduationCap className="text-white" size={40} />
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-white">
-                    FreeCodeCamp
-                  </p>
-                  <p>
-                    JavaScript Algorithms and Data Structures, Responsive Web
-                    Design
-                  </p>
-                  <p>Completed: 2024</p>
-                </div>
+
+          <div className="text-opacity-50 text-white py-4">
+            <div className="flex items-center gap-4">
+              <div className="bg-col1 py-3 px-3 rounded-full">
+                <FaGraduationCap className="text-white" size={40} />
+              </div>
+
+              <div>
+                <p className="text-2xl font-semibold text-white">HavardX</p>
+                <p>CS50: Introduction to Computer Science</p>
+                <p>Completed: 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-opacity-50 text-white py-4">
+            <div className="flex items-center gap-4">
+              <div className="bg-col1 py-3 px-3 rounded-full">
+                <FaGraduationCap className="text-white" size={40} />
+              </div>
+              <div>
+                <p className="text-2xl font-semibold text-white">
+                  FreeCodeCamp
+                </p>
+                <p>
+                  JavaScript Algorithms and Data Structures, Responsive Web
+                  Design
+                </p>
+                <p>Completed: 2024</p>
               </div>
             </div>
           </div>
