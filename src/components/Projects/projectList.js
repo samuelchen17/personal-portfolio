@@ -1,22 +1,22 @@
 import pokedexImg from "../../assets/project/pokedex.png";
 import weatherAppImg from "../../assets/project/weatherApp.jpeg";
 import portfolioImg from "../../assets/project/portfolio.jpeg";
+import motoblogImg from "../../assets/project/motoblog.png";
 
 export const projects = [
   {
     title: "MOTOCE Blog",
-    src: portfolioImg,
+    src: motoblogImg,
     desc: "Developed a motorcycle blog websites where user's can comment, like and save posts",
     skillSet: [
       "React",
       "Tailwind",
-      "Framer Motion",
       "TypeScript",
-      "HTML",
-      "CSS",
       "Express",
       "NodeJs",
       "Axios",
+      "MongoDB",
+      "Firebase",
     ],
     link: "https://moto-blog-2.vercel.app/",
     code: "https://github.com/samuelchen17/moto-blog-2",

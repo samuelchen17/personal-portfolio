@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { projects } from "./projects";
+import { projects } from "./projectList";
 import SectionHeading from "../design/ui-styling/SectionHeading";
 
 const Projects = () => {
