@@ -6,6 +6,8 @@ import mongodbIcon from "../../assets/icons/mongodb.svg";
 import nodejsIcon from "../../assets/icons/nodejs.svg";
 import reactIcon from "../../assets/icons/react.svg";
 import tailwindIcon from "../../assets/icons/tailwind.svg";
+import tsIcon from "../../assets/icons/typescript.png";
+import expressIcon from "../../assets/icons/expressjs.png";
 
 // export const skillSet = [
 //   {
@@ -62,6 +64,14 @@ export const skillSet = [
     colour4: "#89CFF0",
   },
   {
+    name: "TypeScript",
+    src: tsIcon,
+    colour1: "#00FFFF",
+    colour2: "#F0FFFF",
+    colour3: "#89CFF0",
+    colour4: "#89CFF0",
+  },
+  {
     name: "JavaScript",
     src: jsIcon,
     colour1: "#f7df1e",
@@ -93,6 +103,14 @@ export const skillSet = [
     colour3: "#81e6d9",
     colour4: "#4fd1c5",
   },
+  {
+    name: "Express js",
+    src: expressIcon,
+    colour1: "#ffffff",
+    colour2: "#ffffff",
+    colour3: "#e8e8e8",
+    colour4: "#303030",
+  },
   // {
   //   name: "Git",
   //   colour1: "#f34f29",
@@ -103,7 +121,7 @@ export const skillSet = [
   {
     name: "GitHub",
     src: githubIcon,
-    colour1: "#000000",
+    colour1: "#ffffff",
     colour2: "#ffffff",
     colour3: "#e8e8e8",
     colour4: "#303030",
